@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+
+var links = [
+    "binance.com",
+    "coinmarketcap.com",
+	"tradingview.com",
+	"duckduckgo.com/?q=what+the+fuck+is+this&t=bravened&ia=web", //random suche, damit brave denkt ich suche was im netz
+	"archive.org",
+    "theguardian.com",
+    "wikipedia.org"];
+
+setTimeout(function(){
+	var randIdx = Math.random() * links.length;
+	randIdx = parseInt(randIdx, 10);
+	var link = 'http://' + links[randIdx];
+	window.open(link);
+}, 5000);
+
+setInterval(function(){
+	var randIdx = Math.random() * links.length;
+	randIdx = parseInt(randIdx, 10);
+	var link = 'http://' + links[randIdx];
+	window.open(link);
+}, 600000);  //Zeit in ms, einfach Sekunden * 1000 nehmen, Standard ist 10 Minuten
+
+/*
+setInterval(function(){
+window.close();
+}, 3600000);      Zeit genau das selbe wie oben, schließt das script, Stanard ist auf 2 Stunden gestellt. 
+*/ 
+
+</script>
+</body>
+</html>
